@@ -10,6 +10,7 @@ Expressões numéricas são sequências de duas ou mais operações que devem se
 - 2 * ( 5 - 1 ) = 8
 - 2^2 + 8 / 2 = 8
 - 2^( 3 - 1) = 4
+
 E assim por diante.
 
 ### Instruções 
