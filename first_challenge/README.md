@@ -38,7 +38,10 @@ A saída deverá ser:
 ```
 
 ### Critério de aprovação:
-- Utilizar o arquivo em anexo para validar seu algoritmo
+- Utilizar o arquivo em anexo para validar seu algoritmo.
+
+### Extras:
+- Converter a expressão passada pelo usuário em notação matemática (tipo isso aqui: https://pt-static.z-dn.net/files/d8d/5de8fcbd8bc52d11f3cc5a4c3b13475f.jpg) e retornar um JSON com o resultado da expressão e a imagem em base64.
 
 ### Como você deve nos enviar o desafio?
 - É de caráter obrigatório o registro de horas para análise (você pode usar softwares como https://getharvest.com, https://clockify.me/, etc).
