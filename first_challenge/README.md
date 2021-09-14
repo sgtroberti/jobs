@@ -17,7 +17,7 @@ E assim por diante.
 
 Este desafio consiste em:
 
-- Criar um programa em Node.Js que resolva qualquer expressão numérica dada pelo usuário.
+- Criar um programa em JS que resolva qualquer expressão numérica dada pelo usuário.
 
 - O programa deve receber, via linha de comando, a expressão numérica completa.
 
