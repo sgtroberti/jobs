@@ -8,6 +8,7 @@ Dada uma matriz 6x6:
 
 Dada uma ampulheta desenhada no console:
 
+```
 ####################
 ####################
 # ################ #
@@ -29,7 +30,7 @@ Dada uma ampulheta desenhada no console:
 ##                ##
 ####################
 n = 20
-
+```
 O programa deverá desenhar uma ampulheta com n >= 20, onde `n` é o input dado ao usuário.
 
 ### Instruções 
@@ -45,6 +46,7 @@ Este desafio consiste em:
 ### Extras:
 - Mostrar para o usuário o preenchimento da areia no seu lado inferior, como na imagem: 
 
+```
 #####################
 ##                 ##
 # #               # #
@@ -67,6 +69,7 @@ Este desafio consiste em:
 #####################
 #####################
 n = 20
+```
 
 - Caso você se divirta com este desafio, envie-nos o programa movimentando o grão de areia com o passar do tempo, até que todos os grão cheguem no lado contrário.
 
