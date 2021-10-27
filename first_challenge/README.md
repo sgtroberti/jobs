@@ -1,48 +1,74 @@
 # Desafio de Lógica
 
-## Expressões Matemáticas
+## Cálculo da Ampulheta
 
 ### Introdução 
 
-Expressões numéricas são sequências de duas ou mais operações que devem ser realizadas respeitando determinada ordem. Para encontrar sempre um mesmo valor quando calculamos uma expressão numérica, usamos regras que definem a ordem que as operações serão feitas.
+Dada uma matriz 6x6:
 
-- 12 + 3 * 5 = 27
-- 2 * ( 5 - 1 ) = 8
-- 2^2 + 8 / 2 = 8
-- 2^( 3 - 1) = 4
+Dada uma ampulheta desenhada no console:
 
-E assim por diante.
+####################
+####################
+# ################ #
+#  ##############  #
+#   ############   #
+#    ##########    #
+#     ########     #
+#      ######      #
+#       ####       #
+#        ##        #
+#        ##        #
+#       #  #       #
+#      #    #      #
+#     #      #     #
+#    #        #    #
+#   #          #   #
+#  #            #  #
+# #              # #
+##                ##
+####################
+n = 20
+
+O programa deverá desenhar uma ampulheta com n >= 20, onde `n` é o input dado ao usuário.
 
 ### Instruções 
 
 Este desafio consiste em:
 
-- Criar um programa em JS que resolva qualquer expressão numérica dada pelo usuário.
+- Criar um programa em JS que desenhe qualquer ampulheta com tamanho indicado pelo usuário.
 
-- O programa deve receber, via linha de comando, a expressão numérica completa.
-
-- O programa deverá solucionar a expressão numérica e verificar casos de erros matemáticos e expressões mal formatadas.
-
-### Exemplo 
-
-Considere a seguinte entrada:
-
-```
-2 * ( 5 - 1 )
-```
-A saída deverá ser:
-
-```
-2 * ( 5 - 1 )
-8
-```
 
 ### Critério de aprovação:
-- Utilizar o arquivo em anexo para validar seu algoritmo.
-- NÃO será permitido o uso de bibliotecas como `mathjs` ou funções `eval()` e relacionados.
+- O candidato deverá realizar o desafio sem o uso de NENHUMA biblioteca auxiliar de desenhos. Utilize apenas lógica de programação.
 
 ### Extras:
-- Converter a expressão passada pelo usuário em notação matemática (tipo isso aqui: https://pt-static.z-dn.net/files/d8d/5de8fcbd8bc52d11f3cc5a4c3b13475f.jpg) e retornar um JSON com o resultado da expressão e a imagem em base64.
+- Mostrar para o usuário o preenchimento da areia no seu lado inferior, como na imagem: 
+
+#####################
+##                 ##
+# #               # #
+#  #             #  #
+#   #           #   #
+#    #         #    #
+#     #       #     #
+#      #     #      #
+#       #   #       #
+#        # #        #
+#         #         #
+#        ###        #
+#       #####       #
+#      #######      #
+#     #########     #
+#    ###########    #
+#   #############   #
+#  ###############  #
+# ################# #
+#####################
+#####################
+n = 20
+
+- Caso você se divirta com este desafio, envie-nos o programa movimentando o grão de areia com o passar do tempo, até que todos os grão cheguem no lado contrário.
 
 ### Como você deve nos enviar o desafio?
 - É de caráter obrigatório o registro de horas para análise (você pode usar softwares como https://getharvest.com, https://clockify.me/, etc).
@@ -52,5 +78,5 @@ A saída deverá ser:
 ### O que você vai desenvolver com este desafio?
 - Entendimento e aplicação em problemas de contexto
 - Levantamento de hipóteses e testes das soluções
-- Conhecimento em lógica de programação e estrutura de dados
+- Conhecimento em lógica de programação e estrutura de dados básica
 - Detalhamento de atividades e feedbacks
