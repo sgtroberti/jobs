@@ -71,7 +71,7 @@ Este desafio consiste em:
 n = 20
 ```
 
-- Caso você se divirta com este desafio, envie-nos o programa movimentando o grão de areia com o passar do tempo, até que todos os grão cheguem no lado contrário.
+- Caso você se divirta com este desafio, envie-nos o programa movimentando o grão de areia com o passar do tempo, até que todos os grão cheguem ao lado contrário.
 
 ### Como você deve nos enviar o desafio?
 - É de caráter obrigatório o registro de horas para análise (você pode usar softwares como https://getharvest.com, https://clockify.me/, etc).
