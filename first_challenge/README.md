@@ -4,8 +4,6 @@
 
 ### Introdução 
 
-Dada uma matriz 6x6:
-
 Dada uma ampulheta desenhada no console:
 
 ```
