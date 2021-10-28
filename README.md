@@ -23,7 +23,7 @@ They will deploy all these projects using these tools: Docker, Kubernetes, Jenki
 - [ ] MongoDB
 - [ ] Basic knowledge of TypeScript
 - [ ] Would be awesome if you had any experience with: ExpressJs, Docker, Kubernetes
-- [ ] [Challenge](./backend/challenge.md)
+- [ ] [Challenge](./backend/README.md)
 
 # Frontend (allocated or remote)
 ## Description
@@ -37,7 +37,7 @@ Frontend developers will work on multiple projects to solve hard frontend and mo
 - [ ] Basic knowledge of TypeScript
 - [ ] Basic knowledge of Styling and Css
 - [ ] Good to know: Redux, Redux Saga, Redux Thunk, React Hooks, ContextAPI
-- [ ] [Challenge](./frontend/challenge.md)
+- [ ] [Challenge](./frontend/README.md)
 
 # FullStack (allocated or remote)
 ## Description
@@ -47,7 +47,7 @@ Fullstack developers build, test and deliver backend, frontend and mobile parts 
 - [ ] All the requirements for backend developers
 - [ ] All the requirements for frontend developers
 - [ ] Experience in fullstack projects
-- [ ] [Challenge](./fullstack/challenge.md)
+- [ ] [Challenge](./fullstack/README.md)
 
 # How to apply
 The process starts when you send us an email to `rh@mobixtec.com`. Good luck!
