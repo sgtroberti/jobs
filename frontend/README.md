@@ -48,6 +48,6 @@ Link para o Figma https://www.figma.com/file/bLdWjL7pxSdWde02icnhmX/Tabela-de-Pe
 
 ### Como você deve nos enviar o desafio?
 - É de caráter obrigatório o registro de horas para análise (você pode usar softwares como https://getharvest.com, https://clockify.me/, etc).
-- Você deve enviar o desafio para `dev-team@mobixtec.com` com título `Processo Seletivo Mobix - Desafio Técnico - SeuNome`.
+- Você deve enviar este desafio na mesma thread do email que você recebeu este desafio.
 - Utilize a plataforma Netlify ou Vercel para fazer deploy da solução e enviar o link junto com repositório do github.
 - Detalhe toda a sua experiência, informando os pontos de desafio que você achou mais legal.
