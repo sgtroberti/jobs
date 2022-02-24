@@ -73,7 +73,7 @@ n = 20
 
 ### Como você deve nos enviar o desafio?
 - É de caráter obrigatório o registro de horas para análise (você pode usar softwares como https://getharvest.com, https://clockify.me/, etc).
-- Você deve enviar o desafio com um link do github para `dev-team@mobixtec.com` com título `Processo Seletivo Mobix - Desafio de Lógica - SeuNome`.
+- Você deve enviar este desafio na mesma thread do email que você recebeu este desafio.
 - Detalhe toda a sua experiência, informando os pontos de desafio que você achou mais legal.
 
 ### O que você vai desenvolver com este desafio?
