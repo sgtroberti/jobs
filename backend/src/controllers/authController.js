@@ -1,10 +1,27 @@
-import express from "express";
+import express, { query } from "express";
 import User from "../models/user.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { jwtSecret } from "../utils/auth.js";
 
-const router = express.Router();
+const authRouter = express.Router();
 
-router.post("/signup", async (req, res) => {
+const generateToken = (params = {}) => {
+  return jwt.sign({ params }, jwtSecret, {
+    expiresIn: 86400,
+  });
+};
+
+authRouter.get("/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  return res.send(await User.findOne({ _id: userId }));
+});
+
+authRouter.get("/", async (req, res) => {
+  return res.send(await User.find());
+});
+
+authRouter.post("/signup", async (req, res) => {
   const { email } = req.body;
   try {
     if (await User.findOne({ email })) {
@@ -13,13 +30,13 @@ router.post("/signup", async (req, res) => {
     const newUser = await User.create(req.body);
     newUser.password = undefined;
 
-    return res.send({ newUser });
+    return res.send({ newUser, token: generateToken({ id: newUser.id }) });
   } catch (err) {
     return res.status(400).send({ error: "Registration failed: " + err });
   }
 });
 
-router.post("/auth", async (req, res) => {
+authRouter.post("/auth", async (req, res) => {
   const { email, password } = req.body;
   const userLogin = await User.findOne({ email }).select("+password");
 
@@ -28,7 +45,8 @@ router.post("/auth", async (req, res) => {
   }
 
   userLogin.password = undefined;
-  return res.send({ userLogin });
+
+  return res.send({ userLogin, token: generateToken({ id: userLogin.id }) });
 });
 
-export default router;
+export default authRouter;
