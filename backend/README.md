@@ -2,10 +2,10 @@
 
 Criar uma API em NodeJS que:
 
-- [ ] Obtenha a informação completa dos principais personagens (`povCharacters`) das Crônicas do Gelo e Fogo.
-- [ ] Obtenha a capa de um ou mais livros.
-- [ ] Obtenha o detalhe de um ou mais personagens.
-- [ ] Obtenha todos os livros relacionados a um personagem.
+- [x] Obtenha a informação completa dos principais personagens (`povCharacters`) das Crônicas do Gelo e Fogo.
+- [x] Obtenha a capa de um ou mais livros.
+- [x] Obtenha o detalhe de um ou mais personagens.
+- [x] Obtenha todos os livros relacionados a um personagem.
 - [x] Não será permitido inserir informações com URL. Deve-se inserir todas as informações possíveis.
 - [x] As informações deverão ser inseridas num banco de dados em MongoDb e a sua API deve usar o seu banco para consumo de dados. Crie um script para inserir todos os dados automaticamente. Não será permitido inserção manual.
 - [x] A capa do livro deverá ser apresentada no formato base64.
@@ -21,8 +21,8 @@ Criar uma API em NodeJS que:
 
 ## Informações
 
-- [ ] API -> https://anapioficeandfire.com/api/books/
-- [ ] Capas -> https://openlibrary.org/dev/docs/api/covers
+- [x] API -> https://anapioficeandfire.com/api/books/
+- [x] Capas -> https://openlibrary.org/dev/docs/api/covers
 
 ### Como você deve nos enviar o desafio?
 

@@ -48,39 +48,56 @@ const BookSchema = new mongoose.Schema({
   ],
   cover: {
     type: String,
+    select: false,
   },
 });
 
 BookSchema.pre("save", async function (next) {
-  await Promise.all(
-    this.povCharacters.map(async (char) => {
-      const character = await fetch(char).then((res) =>
-        res.json().then(async (res) => {
-          const { url, books, spouse, allegiances, povBooks, ...filteredChar } =
-            res;
+  if (this.povCharacters[0]) {
+    await Promise.all(
+      this.povCharacters.map(async (char) => {
+        if (char.includes("https://")) {
+          const character = await fetch(char).then((res) =>
+            res.json().then(async (res) => {
+              const {
+                url,
+                books,
+                spouse,
+                allegiances,
+                povBooks,
+                ...filteredChar
+              } = res;
 
-          const newCharacter = await Character.findOneAndUpdate(
-            { ...filteredChar },
-            { $push: { povBooks: this._id } },
-            { new: true, upsert: true }
+              const newCharacter = await Character.findOneAndUpdate(
+                { ...filteredChar },
+                { $push: { povBooks: this._id } },
+                { new: true, upsert: true }
+              );
+
+              await newCharacter.save();
+              this.mainCharacters.push(newCharacter._id);
+            })
           );
-
-          await newCharacter.save();
-          this.mainCharacters.push(newCharacter._id);
-        })
-      );
-    })
-  );
+        }
+      })
+    );
+  }
 
   next();
 });
 
 BookSchema.pre("save", async function (next) {
-  this.povCharacters = this.mainCharacters;
-  this.mainCharacters = undefined;
+  if (this.mainCharacters[0]) {
+    this.povCharacters = undefined;
 
-  const coverUrl = `https://covers.openlibrary.org/b/isbn/${this.isbn}-L.jpg`;
-  this.cover = await encode(coverUrl, { string: true });
+    const coverUrl = `https://covers.openlibrary.org/b/isbn/${this.isbn}-L.jpg`;
+
+    if (coverUrl) {
+      this.cover = await encode(coverUrl, { string: true });
+    } else {
+      this.cover = "";
+    }
+  }
 
   next();
 });
