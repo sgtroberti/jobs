@@ -12,11 +12,6 @@ const generateToken = (params = {}) => {
   });
 };
 
-authRouter.get("/:userId", async (req, res) => {
-  const userId = req.params.userId;
-  return res.send(await User.findOne({ _id: userId }));
-});
-
 authRouter.get("/", async (req, res) => {
   return res.send(await User.find());
 });

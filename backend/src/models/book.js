@@ -90,12 +90,12 @@ BookSchema.pre("save", async function (next) {
   if (this.mainCharacters[0]) {
     this.povCharacters = undefined;
 
-    const coverUrl = `https://covers.openlibrary.org/b/isbn/${this.isbn}-L.jpg`;
+    try {
+      const coverUrl = `https://covers.openlibrary.org/b/isbn/${this.isbn}-L.jpg`;
 
-    if (coverUrl) {
-      this.cover = await encode(coverUrl, { string: true });
-    } else {
-      this.cover = "";
+      this.cover = (await encode(coverUrl, { string: true })) || "";
+    } catch (error) {
+      this.cover = "Cannot fetch Cover, External API is down";
     }
   }
 

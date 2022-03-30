@@ -2,11 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "backend challenge for Mobix",
-  "main": "app.js",
+  "main": "src/app.js",
   "repository": "https://github.com/sgtroberti/jobs/tree/master/backend",
   "author": "Guilherme Roberti",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "dev": "npx nodemon"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",

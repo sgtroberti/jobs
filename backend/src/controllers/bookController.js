@@ -16,7 +16,9 @@ bookRouter.get("/", async (req, res) => {
 
 bookRouter.get("/:bookId/cover", async (req, res) => {
   try {
-    return res.send(await Book.findById(req.params.bookId).select("cover"));
+    const response = await Book.findById(req.params.bookId).select("cover");
+
+    return res.send(response);
   } catch (error) {
     return res.status(400).send({ error: "Can't fetch, try again " + error });
   }

@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, async () => {
-  await Book.deleteMany({});
-  await Character.deleteMany({});
-  await seed();
+  // await Book.deleteMany({});
+  // await Character.deleteMany({});
+  // await seed();
   console.log("Server running on port: ", port);
 });
