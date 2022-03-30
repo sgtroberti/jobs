@@ -18,12 +18,15 @@ app.use("/char", characterRouter);
 app.use("/book", bookRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello World teste 123");
+  res.send("API is running");
 });
 
 app.listen(port, async () => {
-  // await Book.deleteMany({});
-  // await Character.deleteMany({});
-  // await seed();
+  const testDB = await Book.find();
+  if (!testDB[0]) {
+    await Book.deleteMany({});
+    await Character.deleteMany({});
+    await seed();
+  }
   console.log("Server running on port: ", port);
 });
